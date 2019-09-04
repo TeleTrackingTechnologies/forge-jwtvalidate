@@ -18,7 +18,7 @@ class JwtTokenValidator:
         print(decoded)
 
     def initParser(self):
-        parser = argparse.ArgumentParser(prog='forge verify-jwt')
+        parser = argparse.ArgumentParser(prog='forge jwtvalidate')
         parser.add_argument('-t', '--token', action='store', dest='token', required=True,
                             help='valid jwt token that is generated using a private key matching the public key argument')
         parser.add_argument('-p', '--publickey', action='store', dest='publicKey', required=True,
