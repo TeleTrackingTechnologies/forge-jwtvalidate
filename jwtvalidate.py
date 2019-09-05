@@ -1,5 +1,5 @@
 """ JWTValidate Plugin """
-from jwtvalidate_logic.jwtvalidate_logic import JwtTokenValidator
+from .jwtvalidate_logic.jwtvalidate_logic import JwtTokenValidator
 
 
 def execute(args):
