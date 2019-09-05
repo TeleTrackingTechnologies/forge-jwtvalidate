@@ -1,12 +1,16 @@
-from .jwtvalidate_logic.jwtvalidate_logic import JwtTokenValidator
+""" JWTValidate Plugin """
+from jwtvalidate_logic.jwtvalidate_logic import JwtTokenValidator
 
 
 def execute(args):
-	ign = JwtTokenValidator()
-	ign.execute(args)
+    """ Execute Command Interface """
+    ign = JwtTokenValidator()
+    ign.execute(args)
 
 def helptext():
-	return "Validate JWT tokens"
+    """ Basic Plugin Helptext Display """
+    return "Validate JWT tokens"
 
 def register(app):
-	app.register_plugin('jwtvalidate', execute, helptext())
+    """ Register Plugin with Forge """
+    app.register_plugin('jwtvalidate', execute, helptext())
