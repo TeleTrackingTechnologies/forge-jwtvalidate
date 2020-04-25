@@ -8,7 +8,7 @@ class JwtTokenValidator:
     def __init__(self):
         self.arg_parser = self.init_arg_parser()
 
-    def execute(self, args):
+    def execute(self, args: List[str]) -> None:
         """ Execute """
         parsed_args = self.arg_parser.parse_args(args)
 
@@ -24,7 +24,7 @@ class JwtTokenValidator:
         print(decoded)
 
     @staticmethod
-    def init_arg_parser():
+    def init_arg_parser() -> argparse.ArgumentParser:
         """ Initialize Argument Parser """
         parser = argparse.ArgumentParser(prog='forge jwtvalidate')
         parser.add_argument('-t', '--token', action='store', dest='token', required=True,

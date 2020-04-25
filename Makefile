@@ -25,3 +25,5 @@ python-build:
     pylint -j 4 --rcfile=pylintrc jwtvalidate.py; \
 	pylint -j 4 --rcfile=pylintrc jwtvalidate_logic; \
     )
+check-type:
+	pytype *.py
